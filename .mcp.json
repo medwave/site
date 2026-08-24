@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "aioseo-site": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@automattic/mcp-wordpress-remote"
+      ],
+      "env": {
+        "WP_API_URL": "https://medwave.io/wp-json/mcp/mcp-adapter-default-server",
+        "WP_API_USERNAME": "${WP_API_USERNAME}",
+        "WP_API_PASSWORD": "${WP_API_PASSWORD}"
+      }
+    }
+  }
+}
