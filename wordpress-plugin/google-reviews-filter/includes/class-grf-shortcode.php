@@ -43,14 +43,7 @@ class Grf_Shortcode {
 		wp_enqueue_style( 'grf-style' );
 		wp_enqueue_script( 'grf-filter' );
 
-		$data = Grf_Api::get_reviews();
-
-		if ( empty( $data['success'] ) ) {
-			if ( current_user_can( 'manage_options' ) ) {
-				return '<p class="grf-error">' . esc_html( $data['error'] ) . '</p>';
-			}
-			return '';
-		}
+		$data = Grf_Reviews::get_reviews();
 
 		$settings  = wp_parse_args( get_option( 'grf_settings', array() ), array( 'good_threshold' => 4 ) );
 		$threshold = (int) $settings['good_threshold'];

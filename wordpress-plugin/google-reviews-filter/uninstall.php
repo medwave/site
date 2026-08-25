@@ -8,4 +8,6 @@ if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 }
 
 delete_option( 'grf_settings' );
-delete_transient( 'grf_reviews_cache' );
+
+// Intentionally leave grf_review posts in place — they're the site owner's
+// content (transcribed reviews), not plugin configuration.

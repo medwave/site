@@ -1,6 +1,8 @@
 # Google Reviews Filter
 
-A lightweight WordPress plugin that pulls in your Google Business Profile reviews and lets visitors filter them by **Good** or **Bad**.
+A lightweight WordPress plugin that showcases your Google Business reviews and lets visitors filter them by **Good** or **Bad**.
+
+Reviews are added manually — there's no Google API key, no Google Cloud project, and no billing account required. You copy each review's text, rating, and reviewer name from your Google Business Profile once, and it lives on your own site from then on.
 
 ## Installation
 
@@ -8,17 +10,16 @@ A lightweight WordPress plugin that pulls in your Google Business Profile review
 2. In WordPress admin, go to **Plugins → Add New → Upload Plugin**.
 3. Upload the zip and click **Activate**.
 
-## Setup
+## Adding reviews
 
-1. **Get a Google Places API key**
-   - Go to the [Google Cloud Console](https://console.cloud.google.com/).
-   - Create (or select) a project, then enable the **Places API**.
-   - Create an API key under **APIs & Services → Credentials**.
-   - Restrict the key to the Places API and, ideally, to your server's IP for security.
-2. **Find your Google Place ID**
-   - Use Google's [Place ID Finder](https://developers.google.com/maps/documentation/places/web-service/place-id) and search for your business.
-3. In WordPress, go to **Settings → Google Reviews** and enter your API key and Place ID.
-4. Choose the star rating that should count as "Good" (default: 4+ stars). Anything below is labeled "Bad".
+1. In WordPress admin, go to **Reviews → Add New** (look for the star icon in the left sidebar).
+2. Set the **Title** to the reviewer's name.
+3. Fill in the **Star Rating** and **Review Text** fields in the "Review Details" box.
+4. Optionally set a **Featured Image** as their profile photo.
+5. Optionally set the **Published** date (in the Publish box, top right) to match the actual review date — this controls the display order and the "X days ago" text.
+6. Click **Publish**.
+
+Repeat for each review you want to show. Go to **Settings → Google Reviews** to choose which star rating counts as "Good" (default: 4+ stars) — anything below is labeled "Bad".
 
 ## Usage
 
@@ -36,14 +37,12 @@ Optional attributes:
 Example:
 
 ```
-[google_reviews default_filter="good" limit="5"]
+[google_reviews default_filter="all" limit="5"]
 ```
 
 Visitors see filter buttons (All / Good / Bad) above the review list and can toggle between them instantly — no page reload.
 
-## Notes & limitations
+## Notes
 
-- Google's Places API returns a **maximum of 5 reviews** per business, chosen by Google's own algorithm — not necessarily the newest, highest, or lowest rated. This is a Google API limitation, not something this plugin can change.
-- Reviews are cached (default: 12 hours, configurable) to avoid unnecessary API calls and stay within Google's usage quota/billing.
-- Use **Settings → Google Reviews → Clear Cached Reviews Now** to force an immediate refresh.
-- The Places API is a paid Google Cloud service; Google provides a monthly free credit that comfortably covers typical small-business traffic.
+- Deleting the plugin removes its one settings option but leaves your added reviews in place, so reinstalling later won't lose anything.
+- To update a review later, edit it under **Reviews** in the admin sidebar like any other post.
