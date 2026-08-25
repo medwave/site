@@ -32,7 +32,7 @@ class Grf_Shortcode {
 		$atts = shortcode_atts(
 			array(
 				'limit'          => 0,
-				'default_filter' => 'all',
+				'default_filter' => 'good',
 			),
 			$atts,
 			'google_reviews'

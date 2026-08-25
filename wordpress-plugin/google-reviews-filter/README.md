@@ -31,7 +31,7 @@ Add the shortcode to any page, post, or widget:
 Optional attributes:
 
 - `limit="10"` — maximum number of reviews to display.
-- `default_filter="good"` — which filter (`all`, `good`, or `bad`) is active when the page loads.
+- `default_filter="good"` — which filter (`all`, `good`, or `bad`) is active when the page loads. Defaults to `good` so visitors see your best reviews first.
 
 Example:
 

@@ -1,7 +1,12 @@
 .grf-wrapper {
-	max-width: 720px;
-	margin: 0 auto;
+	width: 100%;
+	box-sizing: border-box;
+	text-align: left;
 	font-family: inherit;
+}
+
+.grf-wrapper * {
+	box-sizing: border-box;
 }
 
 .grf-summary {

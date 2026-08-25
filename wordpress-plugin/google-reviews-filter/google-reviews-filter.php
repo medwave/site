@@ -3,7 +3,7 @@
  * Plugin Name:       Google Reviews Filter
  * Plugin URI:        https://medwave.io
  * Description:       Pulls in your Google Business reviews and lets visitors filter them by Good or Bad. Use the [google_reviews] shortcode anywhere.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Requires at least: 5.8
  * Requires PHP:      7.4
  * Author:            Medwave
@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // No direct access.
 }
 
-define( 'GRF_VERSION', '1.0.0' );
+define( 'GRF_VERSION', '1.0.1' );
 define( 'GRF_PLUGIN_FILE', __FILE__ );
 define( 'GRF_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'GRF_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
