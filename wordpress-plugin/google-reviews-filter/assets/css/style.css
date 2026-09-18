@@ -1,0 +1,146 @@
+.grf-wrapper {
+	width: 100%;
+	box-sizing: border-box;
+	text-align: left;
+	font-family: inherit;
+}
+
+.grf-wrapper * {
+	box-sizing: border-box;
+}
+
+.grf-summary {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-bottom: 16px;
+	flex-wrap: wrap;
+}
+
+.grf-summary-rating {
+	font-size: 1.5em;
+	font-weight: 700;
+}
+
+.grf-summary-total {
+	color: #666;
+	font-size: 0.9em;
+}
+
+.grf-stars {
+	color: #fbbc04;
+	letter-spacing: 1px;
+	font-size: 1em;
+	white-space: nowrap;
+}
+
+.grf-filters {
+	display: flex;
+	gap: 8px;
+	margin-bottom: 20px;
+	flex-wrap: wrap;
+}
+
+.grf-filter-btn {
+	border: 1px solid #ccc;
+	background: #fff;
+	color: #333;
+	padding: 6px 14px;
+	border-radius: 999px;
+	cursor: pointer;
+	font-size: 0.9em;
+	transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.grf-filter-btn:hover {
+	border-color: #999;
+}
+
+.grf-filter-btn.is-active {
+	background: #1a73e8;
+	border-color: #1a73e8;
+	color: #fff;
+}
+
+.grf-reviews-list {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.grf-review {
+	border: 1px solid #e5e5e5;
+	border-radius: 8px;
+	padding: 16px;
+}
+
+.grf-review[hidden] {
+	display: none;
+}
+
+.grf-review-header {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin-bottom: 8px;
+}
+
+.grf-avatar {
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	flex-shrink: 0;
+}
+
+.grf-review-meta {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	flex-grow: 1;
+}
+
+.grf-author {
+	font-weight: 600;
+}
+
+.grf-review-stars {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.grf-badge {
+	font-size: 0.75em;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+	padding: 2px 8px;
+	border-radius: 999px;
+}
+
+.grf-badge-good {
+	background: #e6f4ea;
+	color: #137333;
+}
+
+.grf-badge-bad {
+	background: #fce8e6;
+	color: #c5221f;
+}
+
+.grf-time {
+	color: #888;
+	font-size: 0.8em;
+	white-space: nowrap;
+}
+
+.grf-review-text {
+	margin: 0;
+	line-height: 1.5;
+	color: #333;
+}
+
+.grf-empty,
+.grf-error {
+	color: #666;
+}
