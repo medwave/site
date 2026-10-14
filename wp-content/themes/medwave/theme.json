@@ -1,0 +1,121 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"settings": {
+		"appearanceTools": true,
+		"useRootPaddingAwareAlignments": true,
+		"layout": {
+			"contentSize": "720px",
+			"wideSize": "1200px"
+		},
+		"color": {
+			"defaultPalette": false,
+			"defaultGradients": false,
+			"custom": true,
+			"palette": [
+				{ "slug": "base", "name": "Base (white)", "color": "#FFFFFF" },
+				{ "slug": "surface", "name": "Surface (light tint)", "color": "#F3F7F9" },
+				{ "slug": "border", "name": "Border", "color": "#DCE5EA" },
+				{ "slug": "primary", "name": "Primary (navy)", "color": "#0B3D5C" },
+				{ "slug": "accent", "name": "Accent (teal)", "color": "#0E8C84" },
+				{ "slug": "muted", "name": "Muted text", "color": "#4F6372" },
+				{ "slug": "contrast", "name": "Contrast (text)", "color": "#13222D" }
+			]
+		},
+		"typography": {
+			"defaultFontSizes": false,
+			"fluid": true,
+			"fontFamilies": [
+				{
+					"slug": "system",
+					"name": "System sans",
+					"fontFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+				}
+			],
+			"fontSizes": [
+				{ "slug": "small", "name": "Small", "size": "0.9rem", "fluid": false },
+				{ "slug": "medium", "name": "Medium", "size": "1.0625rem", "fluid": false },
+				{ "slug": "large", "name": "Large", "size": "1.375rem", "fluid": { "min": "1.2rem", "max": "1.375rem" } },
+				{ "slug": "x-large", "name": "Extra large", "size": "2rem", "fluid": { "min": "1.6rem", "max": "2rem" } },
+				{ "slug": "xx-large", "name": "Huge", "size": "3rem", "fluid": { "min": "2.1rem", "max": "3rem" } }
+			]
+		},
+		"spacing": {
+			"defaultSpacingSizes": false,
+			"units": ["px", "rem", "%", "vw"],
+			"spacingSizes": [
+				{ "slug": "20", "name": "XS", "size": "0.5rem" },
+				{ "slug": "30", "name": "S", "size": "1rem" },
+				{ "slug": "40", "name": "M", "size": "1.5rem" },
+				{ "slug": "50", "name": "L", "size": "clamp(2rem, 4vw, 3rem)" },
+				{ "slug": "60", "name": "XL", "size": "clamp(3rem, 7vw, 5.5rem)" }
+			]
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "var(--wp--preset--color--base)",
+			"text": "var(--wp--preset--color--contrast)"
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--system)",
+			"fontSize": "var(--wp--preset--font-size--medium)",
+			"lineHeight": "1.65"
+		},
+		"spacing": {
+			"blockGap": "1.25rem",
+			"padding": {
+				"left": "1rem",
+				"right": "1rem"
+			}
+		},
+		"elements": {
+			"link": {
+				"color": { "text": "var(--wp--preset--color--accent)" },
+				":hover": { "typography": { "textDecoration": "none" } }
+			},
+			"heading": {
+				"color": { "text": "var(--wp--preset--color--primary)" },
+				"typography": { "fontWeight": "700", "lineHeight": "1.2" }
+			},
+			"h1": { "typography": { "fontSize": "var(--wp--preset--font-size--xx-large)" } },
+			"h2": { "typography": { "fontSize": "var(--wp--preset--font-size--x-large)" } },
+			"h3": { "typography": { "fontSize": "var(--wp--preset--font-size--large)" } },
+			"button": {
+				"color": {
+					"background": "var(--wp--preset--color--accent)",
+					"text": "var(--wp--preset--color--base)"
+				},
+				"border": { "radius": "8px" },
+				"spacing": { "padding": { "top": "0.8rem", "bottom": "0.8rem", "left": "1.4rem", "right": "1.4rem" } },
+				"typography": { "fontWeight": "600" },
+				":hover": {
+					"color": { "background": "var(--wp--preset--color--primary)" }
+				}
+			}
+		},
+		"blocks": {
+			"core/navigation": {
+				"typography": { "fontSize": "var(--wp--preset--font-size--small)", "fontWeight": "500" }
+			},
+			"core/site-title": {
+				"typography": { "fontSize": "var(--wp--preset--font-size--large)", "fontWeight": "700" },
+				"elements": { "link": { "color": { "text": "var(--wp--preset--color--primary)" }, "typography": { "textDecoration": "none" } } }
+			},
+			"core/post-title": {
+				"elements": { "link": { "color": { "text": "var(--wp--preset--color--primary)" }, "typography": { "textDecoration": "none" } } }
+			},
+			"core/post-date": {
+				"color": { "text": "var(--wp--preset--color--muted)" },
+				"typography": { "fontSize": "var(--wp--preset--font-size--small)" }
+			}
+		}
+	},
+	"templateParts": [
+		{ "name": "header", "title": "Header", "area": "header" },
+		{ "name": "footer", "title": "Footer", "area": "footer" }
+	],
+	"customTemplates": [
+		{ "name": "page-no-title", "title": "Page without title (for landing pages)", "postTypes": ["page"] }
+	]
+}

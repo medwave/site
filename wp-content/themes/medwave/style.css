@@ -1,0 +1,61 @@
+/*
+Theme Name: Medwave
+Theme URI: https://medwave.io
+Author: Medwave
+Description: A lightweight block theme for Medwave. Colors, fonts, header, footer and page layouts are all editable in Appearance → Editor, no code needed.
+Requires at least: 6.6
+Tested up to: 6.8
+Requires PHP: 7.4
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: medwave
+Tags: block-theme, full-site-editing, one-column, custom-colors, editor-style, accessibility-ready
+*/
+
+/* Most styling lives in theme.json. Only small extras that theme.json can't express go here. */
+
+:where(.wp-site-blocks) :focus-visible {
+	outline: 2px solid var(--wp--preset--color--accent);
+	outline-offset: 2px;
+}
+
+.skip-link:focus {
+	background: var(--wp--preset--color--base);
+	color: var(--wp--preset--color--contrast);
+	padding: 0.75rem 1rem;
+	z-index: 100000;
+}
+
+/* Cards used in the service and step patterns */
+.is-style-medwave-card {
+	background: var(--wp--preset--color--base);
+	border: 1px solid var(--wp--preset--color--border);
+	border-radius: 12px;
+	padding: var(--wp--preset--spacing--40);
+	height: 100%;
+}
+
+/* Sticky header */
+.medwave-header {
+	position: sticky;
+	top: 0;
+	z-index: 50;
+}
+.admin-bar .medwave-header {
+	top: var(--wp-admin--admin-bar--height, 0);
+}
+
+/* FAQ accordion (core/details) */
+.wp-block-details {
+	border-bottom: 1px solid var(--wp--preset--color--border);
+	padding-block: var(--wp--preset--spacing--30);
+}
+.wp-block-details summary {
+	cursor: pointer;
+	font-weight: 600;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	* { scroll-behavior: auto !important; transition: none !important; }
+}
